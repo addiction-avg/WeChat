@@ -1,54 +1,74 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>认证</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<link rel="stylesheet" type="text/css" href="css/basic.css">
-<script type="text/javascript">
-	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-</script>
-<script src="js/jquery.min.js"></script>
-<script src="js/store.js"></script>
-<script>
-  $(document).ready(function () {
-		getList();
-		function getList() { //拉取列表方法
-			var data = {
-				"appplyId": "GZ202002020001",
-			}
-			$.get(url + "/app/gz/queryNotaryInfo.htm", data, function (res) {
-				console.log(res)
-				console.log(url)
-			}, "json");
-		}  
-  })
-</script>
+  <meta charset="utf-8">
+  <title>认证</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" type="text/css" href="css/basic.css">
+  <script type="text/javascript">
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/store.js"></script>
+  <script>
+    $(document).ready(function () {
+      getList();
+      function getList() { //拉取列表方法
+        var data = {
+          "appplyId": "GZ202002020001",
+        }
+        $.get(url + "/app/gz/queryNotaryInfo.htm", data, function (res) {
+          console.log(res)
+          console.log(url)
+        }, "json");
+      }
+    })
+  </script>
 </head>
+
 <body>
-<div class="header">
-  <div class="title">公证服务列表</div>
-  <a href="#" class="apply_but">申请办理公证</a>
-</div>
-<div class="content">
-<div class="search">
-  <img src="images/searchico.png" alt="" class="searchico">
-  <input type="text" value="" class="text01" placeholder="输入交易信息查询，如姓名">
-</div>
-<div class="list_con">
-<div class="list">
-  <div class="list_tit"><span class="dq">重庆</span>/<span class="ywlx">委托公证</span>/<span class="gzslx">买方过户公证</span><span class="ly">2020-03-05</span></div>
-  <ul class="ul01">
-    <li>委托人：<span class="list_detail">张三/李四</span></li>
-    <li>受托人：<span class="list_detail">李文/李丽</span></li>
-    <li>房屋地址：<span class="list_detail">重庆市渝北区xx路13-1</span></li>
-    <li>状态：<span class="list_detail">未提交</span></li>
-  </ul>
-</div>
-<div class="list_but"><a class="list_but">编辑</a><a class="list_but">取消</a></div>
-</div>
-</div>
+  <div class="header">
+    <div class="title">公证服务列表</div>
+    <a href="#" class="apply_but">申请办理公证</a>
+  </div>
+  <div class="content">
+    <div class="search">
+      <img src="images/searchico.png" alt="" class="searchico">
+      <input type="text" value="" class="text01" placeholder="输入交易信息查询，如姓名">
+    </div>
+    <div class="list_con">
+      <div class="list">
+        <div class="list_tit"><span class="dq">重庆</span>/<span class="ywlx">委托公证</span>/<span
+            class="gzslx">买方过户公证</span><span class="ly">2020-03-05</span></div>
+        <ul class="ul01">
+          <li>委托人：<span class="list_detail">张三/李四</span></li>
+          <li>受托人：<span class="list_detail">李文/李丽</span></li>
+          <li>房屋地址：<span class="list_detail">重庆市渝北区xx路13-1</span></li>
+          <li>状态：<span class="list_detail">未提交</span></li>
+        </ul>
+      </div>
+      <div class="list_but"><a class="list_but edit">编辑</a><a class="list_but cancel">取消</a></div>
+    </div>
+  </div>
 
 
 </body>
+
 </html>
+
+<script>
+  /**
+   * 点击编辑进行跳转
+   */
+  $(document).on("click", ".edit", function () {
+    // var current = $(this).attr('instanceId');
+    // var instanceId = $(this).parent().parent().find('instanceId');
+    // window.location.href = "下一页面" + instanceId
+    console.log("编辑")
+  });
+
+  $(document).on("click", ".cancel", function () {
+    console.log("取消")
+  })
+</script>

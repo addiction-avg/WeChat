@@ -1,133 +1,146 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>公证</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<link rel="stylesheet" type="text/css" href="css/basic.css">
-<link rel="stylesheet" type="text/css" href="css/form.css">
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/register.js"></script>  <!--验证表单的js-->
-<link rel="stylesheet" type="text/css" href="css/MultiPicker.css" />
-<script type="text/javascript">
-	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-</script>
+	<meta charset="utf-8">
+	<title>公证</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
+	<!--验证表单的js-->
+	<link rel="stylesheet" type="text/css" href="css/MultiPicker.css" />
+	<script type="text/javascript">
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
 </head>
+
 <body>
-<div class="header">
-  <div class="title">申请公证</div>
-</div>
-<div class="content">
-<div class="tit01">1.选择公证类型</div>
-<div class="apply" id="verifyCheck">
-<form action="">
-  <ul>
-    <li class="form_item">
-     <span class="item_label">地区：</span>
-     <input name="area" type="text" class="required area-input" id="area-input" value="" placeholder="请选择" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择地区"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-     <li class="form_item">
-     <span class="item_label">业务类型：</span>
-     <select>
-       <option>业务类型1</option>
-       <option>业务类2</option>
-       <option>业务类31</option>
-     </select>
-     <input name="area" type="text" class="required bizType-input" id="bizType-input" value="" placeholder="请选择" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择地区"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-    <li class="form_item">
-     <span class="item_label">公证书类型：</span>
-     <input name="area" type="text" class="required gzType-input" id="gzType-input" value="" placeholder="请选择" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择地区"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-     <li class="form_item">
-     <span class="item_label">业务来源：</span>
-     <input name="area" type="text" class="required bizPlatform-input" id="bizPlatform-input" value="" placeholder="请选择" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择地区"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-    <li class="form_item">
-     <span class="item_label">关联订单号：</span>
-     <input name="area" type="text" class="required" value="" placeholder="请输入易解押关联订单号"  data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有输入易解押关联订单号"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-  </ul>
- </form>
-</div>
-<input class="but01" id="submit" type="button" value="提   交"/>
-</div>
+	<div class="header">
+		<div class="title">申请公证</div>
+	</div>
+	<div class="content">
+		<div class="tit01">1.选择公证类型</div>
+		<div class="apply" id="verifyCheck">
+			<form action="">
+				<ul>
+					<li class="form_item">
+						<span class="item_label">地区：</span>
+						<input name="area" type="text" class="required area-input" id="area-input" value=""
+							placeholder="请选择" readonly data-valid="isNonEmpty"
+							data-error="<i class='icon-tips'></i>您还没有选择地区" />
+						<label class="focus valid"></label>
+						<span class="jt"></span>
+					</li>
+					<li class="form_item">
+						<span class="item_label">业务类型：</span>
+						<select>
+							<option>业务类型1</option>
+							<option>业务类2</option>
+							<option>业务类31</option>
+						</select>
+						<input name="area" type="text" class="required bizType-input" id="bizType-input" value=""
+							placeholder="请选择" readonly data-valid="isNonEmpty"
+							data-error="<i class='icon-tips'></i>您还没有选择地区" />
+						<label class="focus valid"></label>
+						<span class="jt"></span>
+					</li>
+					<li class="form_item">
+						<span class="item_label">公证书类型：</span>
+						<input name="area" type="text" class="required gzType-input" id="gzType-input" value=""
+							placeholder="请选择" readonly data-valid="isNonEmpty"
+							data-error="<i class='icon-tips'></i>您还没有选择地区" />
+						<label class="focus valid"></label>
+						<span class="jt"></span>
+					</li>
+					<li class="form_item">
+						<span class="item_label">业务来源：</span>
+						<input name="area" type="text" class="required bizPlatform-input" id="bizPlatform-input"
+							value="" placeholder="请选择" readonly data-valid="isNonEmpty"
+							data-error="<i class='icon-tips'></i>您还没有选择地区" />
+						<label class="focus valid"></label>
+						<span class="jt"></span>
+					</li>
+					<li class="form_item">
+						<span class="item_label">关联订单号：</span>
+						<input name="area" type="text" class="required" value="" placeholder="请输入易解押关联订单号"
+							data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有输入易解押关联订单号" />
+						<label class="focus valid"></label>
+						<span class="jt"></span>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<input class="but01" id="submit" type="button" value="提   交" />
+	</div>
 
-<div id="area-targetContainer"></div>
-<div id="bizType-targetContainer"></div>
-<div id="gzType-targetContainer"></div>
-<div id="bizPlatform-targetContainer"></div>
-<script type="text/javascript">
-	$(function() {
-		$("#submit").click(function() {
-			if (!verifyCheck._click()) return;
-			console.log('验证成功')
+	<div id="area-targetContainer"></div>
+	<div id="bizType-targetContainer"></div>
+	<div id="gzType-targetContainer"></div>
+	<div id="bizPlatform-targetContainer"></div>
+	<script type="text/javascript">
+		$(function () {
+			$("#submit").click(function () {
+				if (!verifyCheck._click()) return;
+				console.log('验证成功')
 
+			});
 		});
-	});
-</script>
-<script src="js/MultiPicker.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-new MultiPicker({
-	input: 'area-input',
-	container: 'area-targetContainer',
-	jsonData: [{
-		 value: '重庆',
-		 }, {
-		 value: '贵阳',
-		 }],
-		success: function (arr) {
-		    $('.area-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-new MultiPicker({
-	input: 'bizType-input',
-	container: 'bizType-targetContainer',
-	jsonData: [{
-		 value: '委托公证',
-		 }, {
-		 value: '委托公证1',
-		 }],
-		success: function (arr) {
-		    $('.bizType-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-new MultiPicker({
-	input: 'gzType-input',
-	container: 'gzType-targetContainer',
-	jsonData: [{
-		 value: '卖方解押公证',
-		 }, {
-		 value: '卖方过户公证',
-		 },{
-		 value: '买方过户公证',
-		 }],
-		success: function (arr) {
-		    $('.gzType-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-new MultiPicker({
-	input: 'bizPlatform-input',
-	container: 'bizPlatform-targetContainer',
-	jsonData: [{
-		 value: '其他',
-		 }, {
-		 value: '易解押',
-		 }],
-		success: function (arr) {
-		    $('.bizPlatform-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-</script>
+	</script>
+	<script src="js/MultiPicker.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new MultiPicker({
+			input: 'area-input',
+			container: 'area-targetContainer',
+			jsonData: [{
+				value: '重庆',
+			}, {
+				value: '贵阳',
+			}],
+			success: function (arr) {
+				$('.area-input').attr('value', JSON.stringify(arr[0].value).replace(/\"/g, ""));
+			}//回调
+		});
+		new MultiPicker({
+			input: 'bizType-input',
+			container: 'bizType-targetContainer',
+			jsonData: [{
+				value: '委托公证',
+			}, {
+				value: '委托公证1',
+			}],
+			success: function (arr) {
+				$('.bizType-input').attr('value', JSON.stringify(arr[0].value).replace(/\"/g, ""));
+			}//回调
+		});
+		new MultiPicker({
+			input: 'gzType-input',
+			container: 'gzType-targetContainer',
+			jsonData: [{
+				value: '卖方解押公证',
+			}, {
+				value: '卖方过户公证',
+			}, {
+				value: '买方过户公证',
+			}],
+			success: function (arr) {
+				$('.gzType-input').attr('value', JSON.stringify(arr[0].value).replace(/\"/g, ""));
+			}//回调
+		});
+		new MultiPicker({
+			input: 'bizPlatform-input',
+			container: 'bizPlatform-targetContainer',
+			jsonData: [{
+				value: '其他',
+			}, {
+				value: '易解押',
+			}],
+			success: function (arr) {
+				$('.bizPlatform-input').attr('value', JSON.stringify(arr[0].value).replace(/\"/g, ""));
+			}//回调
+		});
+	</script>
 </body>
+
 </html>
