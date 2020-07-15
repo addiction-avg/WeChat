@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.form_item { width:100%; height:auto; position: relative; position:relative; padding:0.2rem 0.5rem 0.2rem 1.5rem; box-sizing:border-box; }
+.form_item span.item_label{line-height:0.6rem;  box-sizing:border-box; position:absolute; left:0; top:0.2rem;}
+.form_item input {width: 100%; height: 0.6rem;  outline: 0; border:none; background:none;  font-size: 0.25rem; line-height:0.6rem; text-align:right; -webkit-appearance: none; appearance: none;}
+
+/*.form_item input:focus {
+    border: 2px solid #bbbaba;
+    background: #fff;
+}
+
+.form_item input:active {
+    border: 2px solid #bbbaba;
+    background: #fff;
+}*/
+
+.jq22-get-code {
+    position: absolute;
+    top: 8px;
+    *top: 11px;
+    right: 8px;
+    height: 26px;
+    color: #999;
+    font-size: 12px;
+    line-height: 26px;
+    background: #eee;
+    border-radius: 2px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.jq22-register-tag {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 4px;
+    display: block;
+    float: left;
+}
+
+.clear {
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    *display: none;
+}
+
+.protocol {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.protocol a {
+    color: #ff553e;
+    text-decoration: none;
+}
+
+
+
+.jq22-register-bottom {
+    position: absolute;
+    width: 76%;
+    margin-left: 12%;
+    bottom: -46px;
+}
+
+.jq22-register-bottom a {
+    color: #f6f6f6;
+    font: 12px/1.2 "Hiragino Sans GB","Microsoft YaHei","微软雅黑",arial,Tahoma,SimSun,sans-serif;
+    text-decoration: none;
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.focus {
+    width: 100%;
+    text-align: right;
+    color: #ff552e;
+    font-size: 0.22rem;
+    position: relative;
+    float: left;
+}
+
+.focus span {
+    height: 35px;
+    line-height: 35px;
+}
+
+.icon-tips {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEN0lEQVRYR82YXWwUZRSGn3e7ulD8bSUGxYi4QKzdof7UxhuCNwJiCdBuAiZNjJELe6mJ3qhcqIneqDHRGI3xhqAwbTH1B4MxwWiMksjP7raG0HBhgGAiJYgQqe0cs1u37S473f1mUTtXm+x53/PMmfm+c74Rc/zSHOejLkBL0wCpBzBbBLEmsCbM/gSNEMRGOHvkuPYzXk8RnAENYnR5m5BtROoErg8FMLuE+BpjkDH7RIO5X11hnQCty+tAfIC42zURZoa0G9guP3O0Vn1NgLZhxbUkrn4L9HitxuFxFmDsZGysV4NHz1fzqwpom1rvIh77HLijmpnT/8YQAWs1kDkxm25WQEu3roeYD8x3Sl5zsJ0msDXqz2XCJKGAtrH1Tq7SYdA1NeeLFGinmVB7WCUrAlrnLY3Maz4IWhEpp7PIfuac2rUvc6FcWhkw7b0DPOWY5zeC4CWk80gvAkuc9GY71JftqQpom1YuJ27DkN+EXa7xDvnDB/IK29h2A/GJEaRmFwcwT342O1NzWQWt2+tHbHY0Pis/2zRTY93eD4gOR5+v5GcfDgW0dEsS4sfcTIvRwWb5uT2FCqZX3grBCGies9cE92kgc7CoK6mgdaeeQ3rV2bRAZQbKA2bBepCWRvIheEV+7vkQwCiPJRpGuMqG5WenWulUBW196kYaNRopndmHSDuwIECx6zB7F2lRJK+CSIvlHzlZ+FU0sXRLG8QPuZvaiPzssrIF8hFii7vXPwpjlfoy35YCdqUeIaZ8z3W7jIuMXVqmwaOnpm6229uJ2OpmNDM62CI/t6sccBsxvRfJ1OwE0qfyM72F9VI3oD0jP/t6KWC39yTi/UiAk6ID8jOFfa9uwMCeVn/2jbJ3sDC5fDYnAG1iq/qGPi4F3OzdSwM/zQlAbLX87DelgPltZj5nkKoOsSE3ceUe8QS3Fcev0k6STn0PejBiFa8UYE5+JlVkKG91zyK99r8Cmr2svuwLlQHrGhZmrOIurwvZGqRt7jc7fo/84cMVASe3iNRupLS78TTg9Iad+gJpnYPXl/IzJfGXz4NpL396y49cjgMrp/jj4lLtHbk0BZj29gJrawYcJ6U9mdzM+Mojf3fr2yhW6AqO1wGMPFS+y68CHqpZX+vIX3jM65IJFsz/Dun+mhPUFWi/wAVP/vFz5Tbhx87O5TeRSBxCWlxX7mriye837eVnkdBFMtOvcIBqsH2I26vlifj/XxD0FCeXSh5Vu4alkwuhcR/QFhEiTHaSYLxT/cOzzqBVAQvvZP4gn2h+E+mJCKu7EuAuGO+VP1x1gq8JcHrbaEliDdsRj4FizhU1jiHbVhwEatE7AU6Bbmi9mQSPgjZg5DtGIjyZ/Q7aSxAMcCY34PrFNRJgyUJaTZyFLUsgngRLYizAGAWNYhOnGR360RWq6kZdS+n/q5i6K/hvg/4NPX2LOLSlU28AAAAASUVORK5CYII=');
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    display: inline-block;
+	vertical-align:middle; margin:0 5px 3px 0;
+}
+
+
+.form_item .jq22-btn-reg {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+
+
+
+.form_item .jq22-btn-reg:hover {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+.form_item .jq22-btn-reg:focus {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+
+.msg{
+    margin-left:-20px;
+    width: 350px;
+    text-align: left;
+    color: #ff552e;
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+}
