@@ -1,0 +1,140 @@
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+/* .webuploader-pick {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	background: #00b7ee;
+	padding: 10px 15px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+} */
+
+
+.webuploader-pick {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.98rem;
+    height: 1.98rem;
+    background: url(/images/haier/sctp.jpg) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+/* .webuploader-pick-hover {
+	background: #00a2d4;
+} */
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+
+
+
+#uploader .filelist li p.progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 8px;
+    overflow: hidden;
+    z-index: 50;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-box-shadow: 0 0 0;
+}
+
+
+#uploader .filelist li p.error {
+    background: #f43838;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+    z-index: 100;
+}
+
+/** 删除*/
+.sc_img .info {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0.19rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.2rem;
+    z-index: 10;
+    text-align: center;
+}
+
+/** 失败样式*/
+.sc_img .error {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    right: 0.19rem;
+    background: red;
+    color: white;
+    text-align: center;
+    height: 0.4rem;
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+}
+
+/** 上传进度条*/
+/* .sc_img .progress {
+	position: absolute;
+    right: 0.19rem;
+    bottom: -0.1rem;
+    height: 3px;
+    left: 0;
+    height: 5px;
+    overflow: hidden;
+    z-index: 15;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.sc_img .progress span {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    background: #d14 url(/webUploader/progress.png) repeat-x;
+    -webit-transition: width 200ms linear;
+    -moz-transition: width 200ms linear;
+    -o-transition: width 200ms linear;
+    -ms-transition: width 200ms linear;
+    transition: width 200ms linear;
+    -webkit-animation: progressmove 2s linear infinite;
+    -moz-animation: progressmove 2s linear infinite;
+    -o-animation: progressmove 2s linear infinite;
+    -ms-animation: progressmove 2s linear infinite;
+    animation: progressmove 2s linear infinite;
+    -webkit-transform: translateZ(0);
+} */
+
+
