@@ -8,7 +8,8 @@
 <link rel="stylesheet" type="text/css" href="css/form.css">
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/register.js"></script>  <!--验证表单的js-->
-<link rel="stylesheet" type="text/css" href="css/MultiPicker.css" />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />  <!--下拉部分-->
+<link rel="stylesheet" type="text/css" href="css/style.mobile.css" />  <!--下拉部分-->
 <script type="text/javascript">
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 </script>
@@ -18,50 +19,70 @@
   <div class="title">申请公证</div>
 </div>
 <div class="content">
-<div class="tit01">2.公证信息-添加受托人</div>
+<div class="tit01">2.公证信息-添加买方</div>
 <div class="apply" id="verifyCheck">
 <form action="">
   <ul>
-   
-     <li class="form_item">
+   <li class="form_item">
+   <span class="item_label">类型：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="type" class="required"  value="" placeholder="请选择类型" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择类型" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">个人</div>
+   </div>
+  </li>
+  <li class="form_item">
      <span class="item_label">姓名：</span>
      <input name="area" type="text" class="required" value="" placeholder="请输入姓名" data-valid="isNonEmpty||between:2-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入姓名||<i class='icon-tips'></i>姓名长度2-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头"/>
      <label class="focus valid"></label>
     </li>
+    
      <li class="form_item">
-     <span class="item_label">性别：</span>
-     <input name="area" type="text" class="required gender-input" id="gender-input" value="" placeholder="请选择" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择性别"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
-    <li class="form_item">
+   <span class="item_label">性别：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="gender" class="required"  value="" placeholder="请选择性别" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择性别" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">男</div>
+      <div vid="1">女</div>
+   </div>
+  </li>
+  <li class="form_item">
      <span class="item_label">手机：</span>
      <input name="area" type="text" class="required" value="" placeholder="请输入手机号码" data-valid="isNonEmpty||isPhone" data-error="<i class='icon-tips'></i>您还没有输入手机号码||<i class='icon-tips'></i>请输入正确的手机号码"/>
      <label class="focus valid"></label>
     </li>
+    
     <li class="form_item">
-     <span class="item_label">证件类型：</span>
-     <input name="area" type="text" class="required certificates-input" id="certificates-input" value="" placeholder="请选择证件类型" readonly data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择证件类型"/>
-     <label class="focus valid"></label>
-     <span class="jt"></span>
-    </li>
+   <span class="item_label">证件类型：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="" class="required"  value="" placeholder="请选择证件类型" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择证件类型" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">身份证</div>
+   </div>
+  </li>
+
     <li class="form_item">
      <span class="item_label">证件号码：</span>
      <input name="area" type="text" class="required" value="" placeholder="请输入证件号码" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有输入证件号码"/>
      <label class="focus valid"></label>
     </li>
+   
     </ul>
-  
+ 
  </form>
 </div>
 <input class="but01" id="submit" type="button" value="提   交"/>
 </div>
 
-<div id="type-targetContainer"></div>
-<div id="gender-targetContainer"></div>
-<div id="certificates-targetContainer"></div>
-<div id="marriage-targetContainer"></div>
-<div id="spouseCertificates-targetContainer"></div>
 <script type="text/javascript">
 	$(function() {
 		$("#submit").click(function() {
@@ -71,45 +92,13 @@
 		});
 	});
 </script>
-<script src="js/MultiPicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/hSdrop.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-new MultiPicker({
-	input: 'type-input',
-	container: 'type-targetContainer',
-	jsonData: [{
-		 value: '个人',
-		 }],
-		success: function (arr) {
-		    $('.type-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-new MultiPicker({
-	input: 'gender-input',
-	container: 'gender-targetContainer',
-	jsonData: [{
-		 value: '男',
-		 }, {
-		 value: '女',
-		 }],
-		success: function (arr) {
-		    $('.gender-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-new MultiPicker({
-	input: 'certificates-input',
-	container: 'certificates-targetContainer',
-	jsonData: [{
-		 value: '身份证',
-		 }, {
-		 value: '护照',
-		 },{
-		 value: '军官证',
-		 }],
-		success: function (arr) {
-		    $('.certificates-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
-		 }//回调
-	});
-
+		new hSdrop({
+			els:'.sele-bp'
+		})
+		
 </script>
 </body>
 </html>

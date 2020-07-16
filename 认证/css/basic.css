@@ -48,12 +48,6 @@ body{ width:7.5rem; font-size:.25rem; font-family:"microsoft yahei", "Helvetica 
 input.but01{ width:6.58rem; height:0.9rem; display:block; margin:0.36rem auto; background:#0183e5; border:none; text-align:center; font-size:0.28rem; line-height:0.9rem; color:#fff; cursor:pointer;  border-radius:8px;-webkit-appearance: none; appearance: none; }
 .tit01{ width:6.58rem; height:auto; overflow:hidden; margin:0 auto; line-height:0.85rem; font-size:0.28rem; font-weight:bold; color:#333; padding-top:0.25rem;}
 
-.apply{width:6.58rem; height:auto; overflow:hidden; margin:0rem auto 0.1rem auto; border-radius:8px; background:#ffffff; box-shadow:0 0 6px #ccc; }
-.apply ul{ width:100%; height:auto; padding:0 0.3rem;  box-sizing:border-box;}
-.apply ul li{ width:100%; height:auto; overflow:hidden;  position:relative; border-bottom:1px dashed #ebebeb; font-size:0.25rem;} 
-.apply ul li a{ color:#333;}
-.apply ul li span.jt{position:absolute; right:0; top:0.35rem; width:0.28rem; height:0.28rem; background:url(../images/jt.png) no-repeat; background-size:contain; dispaly:block;  }
-.apply ul li span.bj{ color:#23adf5; float:right; padding-right:0.55rem;}
 
 
 

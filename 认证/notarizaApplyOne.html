@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公证</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/register.js"></script>  <!--验证表单的js-->
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />  <!--下拉部分-->
+<link rel="stylesheet" type="text/css" href="css/style.mobile.css" />  <!--下拉部分-->
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+</head>
+<body>
+<div class="header">
+  <div class="title">申请公证</div>
+</div>
+<div class="content">
+<div class="tit01">1.选择公证类型</div>
+<div class="apply" id="verifyCheck">
+<form action="">
+<ul>
+<li class="form_item">
+   <span class="item_label">地区：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="area" class="required"  value="" placeholder="请选择地区" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择地区" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">重庆</div>
+      <div vid="1">贵阳</div>
+   </div>
+</li>
+
+<li class="form_item">
+   <span class="item_label">业务类型：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="bizType" class="required"  value="" placeholder="请选择业务类型" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择业务类型" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">委托公证</div>
+   </div>
+</li>
+
+<li class="form_item">
+   <span class="item_label">公证书类型：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="gzType" class="required"  value="" placeholder="请选择公证书类型" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择公证书类型" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">卖方解押公证</div>
+      <div vid="1">卖方过户公证</div>
+      <div vid="2">买方过户公证</div>
+   </div>
+</li>
+
+<li class="form_item">
+   <span class="item_label">业务来源：</span>
+   <span class="jt"></span>
+   <div class="sele-bp">
+    <input type="text" name="bizPlatform" class="required"  value="" placeholder="请选择业务来源" disabled="disabled" data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有选择业务来源" />
+    <label class="focus valid"></label>
+   </div>
+   <div class="display-none">
+      <div vid="0">易解押</div>
+      <div vid="1">其他</div>
+   </div>
+</li>
+
+<li class="form_item">
+     <span class="item_label">关联订单号：</span>
+     <input name="area" type="text" class="required" value="" placeholder="请输入易解押关联订单号"  data-valid="isNonEmpty" data-error="<i class='icon-tips'></i>您还没有输入易解押关联订单号"/>
+     <label class="focus valid"></label>
+     <span class="jt"></span>
+    </li>
+  </ul>
+ </form>
+</div>
+<input class="but01" id="submit" type="button" value="提   交"/>
+</div>
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#submit").click(function() {
+			if (!verifyCheck._click()) return;
+			console.log('验证成功')
+
+		});
+	});
+</script>
+<script src="js/swiper.min.js"></script>
+<script src="js/hSdrop.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		new hSdrop({
+			els:'.sele-bp'
+		})
+		
+	</script>
+</body>
+</html>

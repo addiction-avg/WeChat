@@ -2,10 +2,18 @@
 /* CSS Document */
 
 
+.apply{width:6.58rem; height:auto; overflow:hidden; margin:0rem auto 0.1rem auto; border-radius:8px; background:#ffffff; box-shadow:0 0 6px #ccc; }
+.apply ul{ width:100%; height:auto; padding:0 0.3rem;  box-sizing:border-box;}
+.apply ul li.form_item{ width:100%; height:auto; overflow:hidden;  position:relative; border-bottom:1px dashed #ebebeb; font-size:0.25rem; padding:0.2rem 0.5rem 0.2rem 1.5rem; box-sizing:border-box;} 
 
-.form_item { width:100%; height:auto; position: relative; position:relative; padding:0.2rem 0.5rem 0.2rem 1.5rem; box-sizing:border-box; }
-.form_item span.item_label{line-height:0.6rem;  box-sizing:border-box; position:absolute; left:0; top:0.2rem;}
-.form_item input {width: 100%; height: 0.6rem;  outline: 0; border:none; background:none;  font-size: 0.25rem; line-height:0.6rem; text-align:right; -webkit-appearance: none; appearance: none;}
+.apply ul li a{ color:#333;}
+.apply ul li.form_item span.jt{position:absolute; right:0; top:0.35rem; width:0.28rem; height:0.28rem; background:url(../images/jt.png) no-repeat; background-size:contain; dispaly:block;  }
+<!--.apply ul li.form_item span.bj{ color:#23adf5; float:right; padding-right:0.55rem;}
+-->
+
+
+.apply ul li.form_item span.item_label{line-height:0.6rem;  box-sizing:border-box; position:absolute; left:0; top:0.2rem;}
+.apply ul li.form_item input {width: 100%; height: 0.6rem;  outline: 0; border:none; background:none;  font-size: 0.25rem; line-height:0.6rem; text-align:right; -webkit-appearance: none; appearance: none;}
 
 /*.form_item input:focus {
     border: 2px solid #bbbaba;
